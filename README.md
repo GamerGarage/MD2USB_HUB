@@ -73,9 +73,4 @@ MIT License © 2025 Javier García (GamerGarage)
 
 ---
 
-## 💬 Créditos
 
-Proyecto desarrollado por **Javier García**
-Canal de YouTube: [GamerGarage](https://www.youtube.com/@GamerGarage)
-
----
