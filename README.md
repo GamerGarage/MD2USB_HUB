@@ -71,6 +71,5 @@ Consulta el archivo [`LICENSE`](./LICENSE) para más detalles.
 ```text
 MIT License © 2025 Javier García (GamerGarage)
 
----
 
 
