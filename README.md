@@ -1,64 +1,76 @@
-🕹️ MD2USB HUB — Mega Drive to USB + Macro Hub
-MD2USB HUB es un hub USB 2.0 multifunción diseñado para conectar mandos originales de Mega Drive/Genesis al PC, además de ofrecer funciones avanzadas de teclado macro programable y control rotativo con feedback visual mediante una pantalla LCD de 1.8".
+# MD2USB HUB — Mega Drive to USB + Macro Hub
 
-🔧 Características principales
-🎮 Compatibilidad con mandos originales de Mega Drive (hasta 2 simultáneos).
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-⌨️ Teclado macro de 3 botones, completamente personalizable desde PowerToys.
+**Autor:** Javier García ([@GamerGarage](https://www.youtube.com/@GamerGarage))  
+**Diseñado con:** KiCad  
+**Fabricado por:** JLCPCB  
+**Microcontrolador:** Raspberry Pi Pico (RP2040)  
+**Estado del proyecto:** Funcional — *falta solo implementar el sistema de pantalla*
 
-🔄 Encoder rotativo con pulsador, también configurable desde PowerToys.
+---
 
-🖼️ Pantalla LCD ST7735 (128x160):
+## 🔧 Descripción general
 
-Visualización de imagen personalizada almacenada en el código o en la SD integrada.
+**MD2USB HUB** es un proyecto de hardware libre que integra varias funciones útiles en un solo dispositivo compacto:
 
-Feedback gráfico para interacciones con botones o el encoder.
+- ✅ **Hub USB 2.0 de 4 puertos**  
+  - 1 puerto se utiliza internamente por la Raspberry Pi Pico  
+  - 3 puertos USB disponibles para el usuario
 
-💾 Ranura SD integrada para imágenes de usuario.
+- 🎮 **2 puertos para mandos originales de SEGA Mega Drive / Genesis**
 
-🔌 Hub USB 2.0 de 4 puertos, 3 disponibles para otros dispositivos (1 ocupado por la Raspberry Pi Pico).
+- 🎛️ **Teclado macro de 3 botones físicos**  
+  - Totalmente programables mediante [PowerToys](https://learn.microsoft.com/en-us/windows/powertoys/)
 
-📐 Diseñado con KiCad y fabricado por JLCPCB.
+- 🌀 **Encoder rotativo con pulsador central**  
+  - También programable por software como una entrada de teclado  
+  - Feedback visual mediante animaciones en pantalla
 
-⚡ Basado en Raspberry Pi Pico y el chip GL850G para el hub USB.
+- 🖼️ **Pantalla LCD ST7735 (1.8", 128x160 píxeles)**  
+  - Muestra una imagen por defecto almacenada en código  
+  - Permite cargar una imagen personalizada desde tarjeta SD  
+  - Muestra animaciones de retroalimentación al pulsar botones o girar el encoder
 
-📦 Requisitos y dependencias
-Hardware
-Raspberry Pi Pico
+---
 
-GL850G USB 2.0 Hub
+## 📦 Tecnologías y librerías utilizadas
 
-Módulo LCD ST7735 con SD integrada
+- [Earle Philhower's Raspberry Pi Pico Arduino Core](https://github.com/earlephilhower/arduino-pico)
+- [TinyUSB](https://github.com/hathach/tinyusb)
+- [Adafruit ST7735](https://github.com/adafruit/Adafruit-ST7735-Library) *(próximamente)*
 
-Encoder rotativo con pulsador
+---
 
-3 botones físicos para macros
+## 📁 Estructura del hardware
 
-Mandos originales de Mega Drive (opcional)
+- Basado en chip **GL850G** como controlador del hub USB 2.0
+- Raspberry Pi Pico se conecta a uno de los puertos para controlar:
+  - Los botones macro
+  - El encoder
+  - La pantalla ST7735
+  - Los puertos de mando de Mega Drive
 
-Software
-Arduino IDE con:
+---
 
-Earle Philhower’s Raspberry Pi Pico Core
+## ⚡ Instalación y uso
 
-TinyUSB
+> ⚠️ *Instrucciones más detalladas se añadirán cuando el módulo de pantalla esté finalizado.*
 
-(Próximamente) Adafruit ST7735 y SD
+1. Conecta el hub a tu PC mediante cable USB
+2. Usa [PowerToys](https://learn.microsoft.com/en-us/windows/powertoys/) para asignar funciones a los botones y encoder
+3. Inserta una imagen personalizada (`128x160`, formato `.bmp`) en la tarjeta SD si deseas reemplazar la imagen por defecto
 
-⚙️ Estado del proyecto
-✅ Controladores de Mega Drive funcionales
-✅ Teclado macro operativo y configurable por PowerToys
-✅ Encoder rotativo con pulsador integrado
-🔲 Pantalla LCD: en desarrollo
+---
 
-🔒 Licencia
-Este proyecto está licenciado bajo la MIT License.
+## 📜 Licencia
 
-MIT License
+Este proyecto está licenciado bajo la Licencia MIT.  
+Consulta el archivo [`LICENSE`](./LICENSE) para más detalles.
 
-Copyright (c) 2025 Javier García
+```text
+MIT License © 2025 Javier García (GamerGarage)
 
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software...
 
 🙌 Créditos
 Desarrollado por Javier García bajo la marca GamerGarage
